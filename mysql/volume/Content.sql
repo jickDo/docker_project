@@ -6,15 +6,13 @@ DROP TABLE IF EXISTS `Content`;
 
 CREATE TABLE `content` (
                            id INT AUTO_INCREMENT PRIMARY KEY,
-                           title VARCHAR(255) NOT NULL,
-                           author VARCHAR(255) NOT NULL,
-                           date VARCHAR(255),
-                           content TEXT,
-                           imageUrl VARCHAR(255)
+                           content TEXT
 );
 
-insert into content(title, author, date, content, imageUrl) values ('가','임직찬','가','가','가');
-insert into content(title, author, date, content, imageUrl) values ('가','임직찬','가','가','가');
-insert into content(title, author, date, content, imageUrl) values ('가','임직찬','가','가','가');
-insert into content(title, author, date, content, imageUrl) values ('가','임직찬','가','가','가');
-insert into content(title, author, date, content, imageUrl) values ('가','임직찬','가','가','가');
+
+
+
+insert into content(content) values ('임직찬');
+insert into content(content) values ('임직찬');
+insert into content(content) values ('임직찬');
+insert into content(content) values ('임직찬');
