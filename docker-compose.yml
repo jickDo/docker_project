@@ -16,6 +16,7 @@ services:
       - --collation-server=utf8mb4_unicode_ci
     volumes:
       - /Users/limjickchan/Desktop/cloundNative_limjickchan/mysql/volume
+      - ./mysql/volume/:/docker-entrypoint-initdb.d/
   backend:
     build:
       context: ./backend/

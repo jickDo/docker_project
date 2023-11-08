@@ -12,3 +12,9 @@ CREATE TABLE `content` (
                            content TEXT,
                            imageUrl VARCHAR(255)
 );
+
+insert into content(title, author, date, content, imageUrl) values ('가','임직찬','가','가','가');
+insert into content(title, author, date, content, imageUrl) values ('가','임직찬','가','가','가');
+insert into content(title, author, date, content, imageUrl) values ('가','임직찬','가','가','가');
+insert into content(title, author, date, content, imageUrl) values ('가','임직찬','가','가','가');
+insert into content(title, author, date, content, imageUrl) values ('가','임직찬','가','가','가');
