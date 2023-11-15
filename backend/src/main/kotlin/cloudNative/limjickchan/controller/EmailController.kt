@@ -13,7 +13,7 @@ class EmailController(
     private val emailService: EmailService,
 ) {
     @PostMapping("/request")
-    fun sendToMe(@RequestBody userInfo: EmailMessageDto) {
-        return emailService.sendEmailWithTemplate(userInfo)
+    fun sendToMeEmail(@RequestBody userInfo: EmailMessageDto) {
+        return emailService.sendEmailToMe(userInfo)
     }
 }

@@ -227,7 +227,7 @@
                                     <div class="col-md-12">
 
                                         <div class="row">
-                                            <form action="/mail/request" method="POST">
+                                            <form id="myForm" action="http://localhost:8080/mail/request" method="POST">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <input type="text" id="name" name="name" class="form-control" placeholder="이름">
@@ -236,13 +236,13 @@
 
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <input type="email" id="email" name="email" class="form-control" placeholder="이메일">
+                                                        <input type="email" id="emailAddress" name="email" class="form-control" placeholder="이메일">
                                                     </div>
                                                 </div>
 
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <input type="text" id="website" name="website" class="form-control" placeholder="회사 웹사이트">
+                                                        <input type="text" id="companyUrl" name="website" class="form-control" placeholder="회사 웹사이트">
                                                     </div>
                                                 </div>
 
@@ -253,20 +253,20 @@
                                                 </div>
 
                                                 <div class="col-sm-12">
-                                                    <select id="subject" name="subject" class="form-group form-control">
+                                                    <select id="Job" name="Job" class="form-group form-control">
                                                         <option value="" selected disabled>직업</option>
-                                                        <option>백엔드 개발자</option>
-                                                        <option>프론트엔드 개발자</option>
-                                                        <option>테크 리더</option>
-                                                        <option>CTO</option>
-                                                        <option>CEO</option>
+                                                        <option value="BACKEND">BACKEND</option>
+                                                        <option value="FRONT">FRONT</option>
+                                                        <option value="TECHLEADER">TECHLEADER</option>
+                                                        <option value="CTO">CTO</option>
+                                                        <option value="CEO">CEO</option>
 
                                                     </select>
                                                 </div>
 
                                                 <div class="col-sm-12">
                                                     <div class="textarea-message form-group">
-                                                        <textarea id="message" name="message" class="textarea-message form-control" placeholder="하고싶은 말" rows="5"></textarea>
+                                                        <textarea id="comment" name="comment" class="textarea-message form-control" placeholder="하고싶은 말" rows="5"></textarea>
                                                     </div>
                                                 </div>
 
@@ -327,5 +327,6 @@
 <script type="text/javascript" src="js/plugin.js"></script>
 <!-- Main Javascript File  -->
 <script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/postToMe.js"></script>
 </body>
 </html>

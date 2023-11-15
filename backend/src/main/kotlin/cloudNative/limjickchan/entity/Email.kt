@@ -16,15 +16,15 @@ class Email {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null
 
-    val emailAddress: String? = null
+    var emailAddress: String? = null
 
-    val companyUrl: String? = null
+    var companyUrl: String? = null
 
-    val address: String? = null
+    var address: String? = null
 
-    val job: Job? = null
+    var job: Job? = null
 
-    val comment: String? = null
+    var comment: String? = null
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "email")
