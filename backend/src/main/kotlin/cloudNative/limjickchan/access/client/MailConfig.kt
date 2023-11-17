@@ -9,7 +9,7 @@ import org.springframework.web.service.invoker.HttpServiceProxyFactory
 @Configuration
 class MailConfig {
     @Bean
-    internal fun kakaoOpenApiClient(): MailAccessClient {
+    internal fun OpenApiClient(): MailAccessClient {
         val webClient = WebClient.builder().build()
         val factory = HttpServiceProxyFactory.builder(WebClientAdapter.forClient(webClient)).build()
         return factory.createClient(MailAccessClient::class.java)

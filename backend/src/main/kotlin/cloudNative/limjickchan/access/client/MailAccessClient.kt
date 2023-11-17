@@ -1,13 +1,20 @@
 package cloudNative.limjickchan.access.client
 
+import cloudNative.limjickchan.constants.SecretNaverConst
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.RequestHeader
+import org.springframework.web.bind.annotation.RequestParam
+import org.springframework.web.service.annotation.GetExchange
 import org.springframework.web.service.annotation.HttpExchange
-import org.springframework.web.service.annotation.PostExchange
 
-@HttpExchange("https://api.mediastack.com/news?access_key=621fecc2003b38d4ba1d76bf9d51bf0c&country=kr")
+@HttpExchange(SecretNaverConst.NAVER_URL)
 interface MailAccessClient {
-    @PostExchange
+    @GetExchange
     fun getMail(
-        @RequestHeader("Authorization") authorization: String,
-    ): MailInfoDto
+        @RequestHeader("X-Naver-Client-Id") clientId: String,
+        @RequestHeader("X-Naver-Client-Secret") clientSecret: String,
+        @RequestParam("query") query: String,
+        @RequestParam("display") display: Int,
+        @RequestParam("start") start: Int,
+    ): NewsResponse
 }
