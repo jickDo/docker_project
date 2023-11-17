@@ -17,21 +17,21 @@
     <title>기술블로그 - 나의 기록일기</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="images/favicon/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="../images/favicon/apple-touch-icon.png" />
 
     <!-- All CSS Plugins -->
-    <link rel="stylesheet" type="text/css" href="css/plugin.css" />
+    <link rel="stylesheet" type="text/css" href="../css/plugin.css" />
 
     <!-- Main CSS Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
 
     <!-- Google Web Fonts  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700" />
 
     <!-- Syntax Highlighter  -->
-    <link rel="stylesheet" type="text/css" href="css/syntax/shCore.css" />
-    <link rel="stylesheet" type="text/css" href="css/syntax/shThemeDefault.css" />
+    <link rel="stylesheet" type="text/css" href="../css/syntax/shCore.css" />
+    <link rel="stylesheet" type="text/css" href="../css/syntax/shThemeDefault.css" />
 
     <!-- HTML5 shiv and Respond.js support IE8 or Older for HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -54,13 +54,13 @@
             <div class="col-md-3">
                 <div class="about-fixed">
                     <div class="my-pic">
-                        <img src="images/pic/cute-mouse.png" alt="" />
+                        <img src="../images/pic/cute-mouse.png" alt="" />
                         <a href="javascript:void(0)" class="collapsed" data-target="#menu" data-toggle="collapse"><i class="icon-menu menu"></i></a>
                         <div id="menu" class="collapse">
                             <ul class="menu-link">
-                                <li><a href="about.html">나에 관해</a></li>
-                                <li><a href="work.html">포트폴리오</a></li>
-                                <li><a href="contact.html">연락하기</a></li>
+                                <li><a href="../about.html">나에 관해</a></li>
+                                <li><a href="../work.html">포트폴리오</a></li>
+                                <li><a href="../contact.html">연락하기</a></li>
                             </ul>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                 <div class="col-md-12 page-body">
                     <div class="row">
                         <div class="sub-title">
-                            <a href="index.html" title="Go to Home Page">
+                            <a href="../index.html" title="Go to Home Page">
                                 <h2>홈으로 가기</h2>
                             </a>
                             <a href="#comment" class="smoth-scroll"><i class="icon-bubbles"></i></a>
@@ -112,7 +112,7 @@
                                 <!-- Post Detail Start -->
                                 <div class="post-info">
                                         <span>2023. 10. 1 작성자:
-                                            <a href="contact.html" target="_blank">임직찬</a></span>
+                                            <a href="../contact.html" target="_blank">임직찬</a></span>
                                 </div>
                                 <!-- Post Detail End -->
 
@@ -1326,12 +1326,12 @@
                                 <!-- Post Author Bio Box Start -->
                                 <div class="about-author margin-top-70 margin-bottom-50">
                                     <div class="picture">
-                                        <img src="images/testimonial/cute-totoro.png" class="img-responsive" alt="" />
+                                        <img src="../images/testimonial/cute-totoro.png" class="img-responsive" alt="" />
                                     </div>
 
                                     <div class="c-padding">
                                         <h3>
-                                            <a href="contact.html" target="_blank" data-toggle="tooltip" data-placement="top" title="임직찬의 블로그 보기">임직찬</a>
+                                            <a href="../contact.html" target="_blank" data-toggle="tooltip" data-placement="top" title="임직찬의 블로그 보기">임직찬</a>
                                         </h3>
                                         <p>
                                             느리지만 무너지지 않게 쌓아올리는 개발자가 되겠습니다.
@@ -1399,10 +1399,10 @@
                         </div>
                     </div>
                     <div class="col-md-8 col-md-offset-2">
-                        <form id="mc-form" method="post" action="http://uipasta.us14.list-manage.com/subscribe/post?u=854825d502cdc101233c08a21&amp;id=86e84d44b7">
+                        <form id="mc-form" method="post" action="http://localhost:8080/mail/send">
                             <div class="subscribe-form margin-top-20">
-                                <input id="mc-email" type="email" placeholder="Email Address" class="text-input" />
-                                <button class="submit-btn" type="submit">전송</button>
+                                <input id="mc-email" name="email" type="email" placeholder="Email Address" class="text-input">
+                                <button id="submit-btn" class="submit-btn" type="submit">전송</button>
                             </div>
                             <p>주간 뉴스 구독하기</p>
                             <label for="mc-email" class="mc-label"></label>
@@ -1413,10 +1413,10 @@
                 <div class="col-md-12 page-body margin-top-50 footer">
                     <footer>
                         <ul class="menu-link">
-                            <li><a href="index.html">홈</a></li>
-                            <li><a href="about.html">나에 대</a></li>
-                            <li><a href="work.html">포트폴리오</a></li>
-                            <li><a href="contact.html">연락하기</a></li>
+                            <li><a href="../index.html">홈</a></li>
+                            <li><a href="../about.html">나에 대해</a></li>
+                            <li><a href="../work.html">포트폴리오</a></li>
+                            <li><a href="../contact.html">연락하기</a></li>
                         </ul>
 
                         <p>© Copyright 2016 DevBlog. All rights reserved</p>
@@ -1445,24 +1445,25 @@
 <!-- Back to Top End -->
 
 <!-- All Javascript Plugins  -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/plugin.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/plugin.js"></script>
 
 <!-- Main Javascript File  -->
-<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="../js/scripts.js"></script>
 
 <!-- Syntax Highlighter Javascript File  -->
-<script type="text/javascript" src="js/syntax/shCore.js"></script>
-<script type="text/javascript" src="js/syntax/shBrushCss.js"></script>
-<script type="text/javascript" src="js/syntax/shBrushJScript.js"></script>
-<script type="text/javascript" src="js/syntax/shBrushPerl.js"></script>
-<script type="text/javascript" src="js/syntax/shBrushPhp.js"></script>
-<script type="text/javascript" src="js/syntax/shBrushPlain.js"></script>
-<script type="text/javascript" src="js/syntax/shBrushPython.js"></script>
-<script type="text/javascript" src="js/syntax/shBrushRuby.js"></script>
-<script type="text/javascript" src="js/syntax/shBrushSql.js"></script>
-<script type="text/javascript" src="js/syntax/shBrushVb.js"></script>
-<script type="text/javascript" src="js/syntax/shBrushXml.js"></script>
+<script type="text/javascript" src="../js/syntax/shCore.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushCss.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushJScript.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushPerl.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushPhp.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushPlain.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushPython.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushRuby.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushSql.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushVb.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushXml.js"></script>
+<script type="text/javascript" src="../js/newsToUser.js"></script>
 
 <!-- Syntax Highlighter Call Function -->
 <script type="text/javascript">
