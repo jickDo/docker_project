@@ -1,22 +1,9 @@
 package cloudNative.limjickchan.access.client
-
-// data class NewsResponse(
-//    val items: Items,
-// )
-//
-// data class Items(
-//    val title: String?,
-//    val originallink: String?,
-//    val link: String?,
-//    val description: String?,
-//    val pubDate: String?,
-// )
-
 data class NewsResponse(
     val items: List<Item>, // JSON 배열에 맞게 List 형태로 선언
 )
 
-data class Item(
+data class Item( // 뉴스에 해당하는 json타입을 미리 data class로 정해두면 알아서 파싱을 해준다.
     var title: String?,
     var originallink: String?,
     var link: String?,

@@ -3,7 +3,7 @@ package cloudNative.limjickchan.dto
 import cloudNative.limjickchan.constants.Job
 import cloudNative.limjickchan.entity.Email
 import com.fasterxml.jackson.annotation.JsonProperty
-
+// 이메일 전송을 위한 DTO이다.
 data class EmailMessageDto(
     val name: String?,
     val emailAddress: String?,
