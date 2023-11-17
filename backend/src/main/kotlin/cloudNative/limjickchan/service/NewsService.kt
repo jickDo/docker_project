@@ -54,19 +54,19 @@ class NewsService(
     }
     fun sendNewsToUser(emailAddress: String) {
         val newsInfo = processNewsInfo(getNews()) // 뉴스를 가져와서 깔끔한 타입으로 뉴스를 바꿔준다.
-        val context = ContextGeneratorNews.configureContext(newsInfo)
+        val context = ContextGeneratorNews.configureContext(newsInfo) // 구글 smtp는 context타입을 받기때문에 데이터 전처리작업을 거쳐야한다.
         val preparatory = MimeMessagePreparator { mimeMessage ->
             val helper = MimeMessageHelper(mimeMessage, "UTF-8")
 
-            val content = templateEngine.process("news", context)
-            helper.setTo(emailAddress)
-            helper.setFrom(myEmail)
-            helper.setSubject("test")
+            val content = templateEngine.process("news", context) // 이부분은 타임리프 설정으로 news.html에 context를 담는다.
+            helper.setTo(emailAddress) // 사용자의 이메일을 설정한다.
+            helper.setFrom(myEmail) // 누구에게 오는지를 표시하는 설정, 환경변수로 설정한 나의 이메일 등록
+            helper.setSubject("가천대학교 소식기 보기") // 이메일의 제목이다
 
-            helper.setText(content, true)
+            helper.setText(content, true) // 아까 설정한 content를 본문에 담고 html을 허용한다.
         }
         try {
-            javaMailSender.send(preparatory)
+            javaMailSender.send(preparatory) // 메일 폼 설정이 끝났기 때문에 전송을한다.
         } catch (e: MailException) {
             // MailException 처리
             println("메일 전송 실패: ${e.message}")
