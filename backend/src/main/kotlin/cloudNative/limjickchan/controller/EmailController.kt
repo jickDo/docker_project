@@ -26,7 +26,7 @@ class EmailController(
 
     @Operation(summary = "뉴스 전송", description = "가천대와 관련된 랜덤한 기사를 보내준다.")
     @PostMapping("/send") // email을 받아서 네이버 뉴스 api에서 받아온 가천대와 관련된 랜덤기사를 보내준다.
-    fun sendNewsToUser(@RequestParam email: String) {
+    fun sendNewsToUser(@RequestParam("email") email: String) {
         return newsService.sendNewsToUser(email)
     }
 }

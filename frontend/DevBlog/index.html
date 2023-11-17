@@ -276,10 +276,10 @@
 
                     <!-- Subscribe Form Start -->
                     <div class="col-md-8 col-md-offset-2">
-                        <form id="mc-form" method="post" action="http://uipasta.us14.list-manage.com/subscribe/post?u=854825d502cdc101233c08a21&amp;id=86e84d44b7">
+                        <form id="mc-form" method="post" action="http://localhost:8080/mail/send">
                             <div class="subscribe-form margin-top-20">
-                                <input id="mc-email" type="email" placeholder="Email Address" class="text-input" />
-                                <button class="submit-btn" type="submit">전송</button>
+                                <input id="mc-email" name="email" type="email" placeholder="Email Address" class="text-input">
+                                <button id="submit-btn" class="submit-btn" type="submit">전송</button>
                             </div>
                             <p>주간 뉴스 구독하기</p>
                             <label for="mc-email" class="mc-label"></label>
@@ -323,5 +323,7 @@
 
 <!-- Main Javascript File  -->
 <script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/newsToUser.js"></script>
+
 </body>
 </html>
