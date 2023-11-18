@@ -1,4 +1,4 @@
-version: "3.0"
+version: "3.9"
 
 services:
   db:
@@ -9,14 +9,16 @@ services:
     ports:
       - "3306:3306"
     environment:
-      - MYSQl_ROOT_PASSWORD=rootroot
+      - MYSQL_ROOT_PASSWORD=rootroot
       - MYSQL_DATABASE=cloud_native
     command:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
     volumes:
-      - /Users/limjickchan/Desktop/cloundNative_limjickchan/mysql/volume
       - ./mysql/volume/:/docker-entrypoint-initdb.d/
+    networks:
+      - cloudNativeNet
+
   backend:
     build:
       context: ./backend/
@@ -25,11 +27,15 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/cloud_native
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/cloud_native
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: rootroot
     depends_on:
       - db
+    networks:
+      - cloudNativeNet
+
+
   frontend:
     build:
       context: ./frontend/
@@ -39,7 +45,10 @@ services:
       - "3000:3000"
     depends_on:
       - backend
-    command : npm start
+    networks:
+      - cloudNativeNet
     stdin_open: true
+
 networks:
   cloudNativeNet:
+    name: cloud_native_net
