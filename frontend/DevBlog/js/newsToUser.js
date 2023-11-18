@@ -4,7 +4,7 @@ document.getElementById('submit-btn').addEventListener('click', function() {
     formData.append('email', email); // 이메일 데이터를 추가합니다
 
     // Fetch API를 사용하여 백엔드로 POST 요청을 보냅니다
-    fetch('http://localhost:8080/mail/send', {
+    fetch('http://backend:8080/mail/send', {
         method: 'POST',
         body: formData
     })
