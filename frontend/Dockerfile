@@ -9,5 +9,4 @@ COPY ./DevBlog ./
 
 # Apache 서버가 3000번 포트에서 리스닝하도록 설정 파일을 수정합니다.
 RUN sed -i 's/Listen 80/Listen 3000/' /usr/local/apache2/conf/httpd.conf
-
 EXPOSE 3000

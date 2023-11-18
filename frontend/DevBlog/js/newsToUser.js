@@ -1,22 +1,34 @@
-document.getElementById('submit-btn').addEventListener('click', function() {
-    var email = document.getElementById('mc-email').value; // 이메일 입력값을 가져옵니다
-    var formData = new FormData(); // FormData 객체를 생성합니다
-    formData.append('email', email); // 이메일 데이터를 추가합니다
+document.addEventListener('DOMContentLoaded', function () {
+    const submitBtn = document.getElementById('submit-btn');
+    const form = document.getElementById('mc-form');
 
-    // Fetch API를 사용하여 백엔드로 POST 요청을 보냅니다
-    fetch('http://backend:8080/mail/send', {
-        method: 'POST',
-        body: formData
-    })
-        .then(function(response) {
-            return response.text(); // 응답 텍스트를 반환합니다
+    submitBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const formdata = {
+            email: document.getElementById('email').value
+        };
+
+        console.log(JSON.stringify(formdata));
+
+        fetch("http://localhost:8080/mail/send", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formdata),
         })
-        .then(function(text) {
-            console.log(text); // 콘솔에 결과를 출력합니다
-            // 성공 메시지를 사용자에게 표시할 수 있습니다
-        })
-        .catch(function(error) {
-            console.error(error); // 오류를 콘솔에 출력합니다
-            // 오류 메시지를 사용자에게 표시할 수 있습니다
-        });
+            .then(response => {
+                // 상태 코드가 200인지 확인합니다.
+                if (response.ok) {
+                    // JSON으로 응답을 파싱합니다.
+                    return response.json();
+                } else {
+                    // 응답이 200이 아니면 에러를 던집니다.
+                    throw new Error('Network response was not ok.');
+                }
+            })
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+    });
 });

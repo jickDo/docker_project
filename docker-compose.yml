@@ -1,4 +1,5 @@
-version: "3.9"
+version: "3"
+
 
 services:
   db:
@@ -19,13 +20,14 @@ services:
     networks:
       - cloudNativeNet
 
+
   backend:
     build:
       context: ./backend/
       dockerfile: Dockerfile
     restart: always
     ports:
-      - "8080:8080"
+      - "127.0.0.1:8080:8080"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/cloud_native
       SPRING_DATASOURCE_USERNAME: root
@@ -34,6 +36,8 @@ services:
       - db
     networks:
       - cloudNativeNet
+    links:
+      - db
 
 
   frontend:
@@ -47,8 +51,9 @@ services:
       - backend
     networks:
       - cloudNativeNet
-    stdin_open: true
+    links:
+      - backend
 
 networks:
   cloudNativeNet:
-    name: cloud_native_net
+    driver: bridge

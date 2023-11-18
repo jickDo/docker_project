@@ -1,5 +1,5 @@
 package cloudNative.limjickchan.dto
 
-data class EmailPostDto(
+data class EmailRequestDto(
     val email: String,
 )

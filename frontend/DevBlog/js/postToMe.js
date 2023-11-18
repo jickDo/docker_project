@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(JSON.stringify(formData))
 
         // `fetch`를 사용하여 JSON으로 서버에 데이터를 보냅니다.
-        fetch("http://backend:8080/mail/request", {
+        fetch("http://localhost:8080/mail/request", {
             mode: "cors",
             method: 'POST',
             headers: {
