@@ -6,7 +6,7 @@ import cloudNative.limjickchan.service.EmailService
 import cloudNative.limjickchan.service.NewsService
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
-import org.springframework.web.bind.annotation.CrossOrigin
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -29,5 +29,10 @@ class EmailController(
     @PostMapping("/send") // email을 받아서 네이버 뉴스 api에서 받아온 가천대와 관련된 랜덤기사를 보내준다.
     fun sendNewsToUser(@RequestBody emailRequestDto: EmailRequestDto) {
         return newsService.sendNewsToUser(emailRequestDto.email)
+    }
+
+    @GetMapping("/test")
+    fun test(): String {
+        return "test"
     }
 }

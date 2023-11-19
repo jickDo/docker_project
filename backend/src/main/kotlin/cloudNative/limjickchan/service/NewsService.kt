@@ -25,10 +25,9 @@ class NewsService(
     private val emailRepository: EmailRepository,
     private val mailAccessClient: MailAccessClient,
 ) {
-    @Value("\${MAIL_USERNAME}")
-    lateinit var myEmail: String
-    // 나의 이메일 정보를 Value를 통해 받는다. 여기서 이메일은 환경변수 설정으로 보관된다.
-    // 이렇게 설정하는 이유는 이메일은 개인정보이기 때문에 환경변수로 가려두는게 좋기 때문이다.
+    var myEmail: String = "jickchan0117@gmail.com"
+
+
 
     fun getNews(): NewsResponse { // 네이버 뉴스 API에 가천대학교와 관련된 뉴스를 가져온다
         return mailAccessClient.getMail(

@@ -1,2 +1,3 @@
-FROM mysql:8.0.29
+FROM mysql:latest
+EXPOSE 3306
 

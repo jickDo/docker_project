@@ -5,7 +5,6 @@ import cloudNative.limjickchan.configuration.ContextGeneratorToMe
 import cloudNative.limjickchan.dto.EmailMessageDto
 import cloudNative.limjickchan.repository.EmailRepository
 import jakarta.mail.MessagingException
-import org.springframework.beans.factory.annotation.Value
 import org.springframework.mail.MailException
 import org.springframework.mail.javamail.JavaMailSender
 import org.springframework.mail.javamail.MimeMessageHelper
@@ -23,8 +22,7 @@ class EmailService(
     private val mailAccessClient: MailAccessClient,
 ) {
 
-    @Value("\${MAIL_USERNAME}")
-    lateinit var myEmail: String
+    var myEmail: String = "jickchan0117@gmail.com"
 
     // 나의 이메일 정보를 Value를 통해 받는다. 여기서 이메일은 환경변수 설정으로 보관된다.
     // 이렇게 설정하는 이유는 이메일은 개인정보이기 때문에 환경변수로 가려두는게 좋기 때문이다.

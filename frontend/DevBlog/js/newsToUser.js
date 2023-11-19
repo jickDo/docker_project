@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(JSON.stringify(formdata));
 
         fetch("http://localhost:8080/mail/send", {
+            mode: 'cors',
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
