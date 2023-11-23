@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tag -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO -->
+    <meta name="description" content="150 words" />
+    <meta name="author" content="uipasta" />
+    <meta name="url" content="http://www.yourdomainname.com" />
+    <meta name="copyright" content="company name" />
+    <meta name="robots" content="index,follow" />
+
+    <title>기술블로그 - 나의 기록일기</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="../images/favicon/apple-touch-icon.png" />
+
+    <!-- All CSS Plugins -->
+    <link rel="stylesheet" type="text/css" href="../css/plugin.css" />
+
+    <!-- Main CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+    <!-- Google Web Fonts  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700" />
+
+    <!-- Syntax Highlighter  -->
+    <link rel="stylesheet" type="text/css" href="../css/syntax/shCore.css" />
+    <link rel="stylesheet" type="text/css" href="../css/syntax/shThemeDefault.css" />
+
+    <!-- HTML5 shiv and Respond.js support IE8 or Older for HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<!-- Preloader Start -->
+<div class="preloader">
+    <div class="rounder"></div>
+</div>
+<!-- Preloader End -->
+
+<div id="main">
+    <div class="container">
+        <div class="row">
+            <!-- About Me (Left Sidebar) Start -->
+            <div class="col-md-3">
+                <div class="about-fixed">
+                    <div class="my-pic">
+                        <img src="../images/pic/cute-mouse.png" alt="" />
+                        <a href="javascript:void(0)" class="collapsed" data-target="#menu" data-toggle="collapse"><i class="icon-menu menu"></i></a>
+                        <div id="menu" class="collapse">
+                            <ul class="menu-link">
+                                <li><a href="../about.html">나에 관해</a></li>
+                                <li><a href="../work.html">포트폴리오</a></li>
+                                <li><a href="../contact.html">연락하기</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="my-detail">
+                        <div class="white-spacing">
+                            <h1>임직찬</h1>
+                            <span>백엔드 개발자</span>
+                        </div>
+
+                        <ul class="social-icon">
+                            <li>
+                                <a href="#" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/jickDo" target="_blank" class="github"><i class="fa fa-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- About Me (Left Sidebar) End -->
+
+            <!-- Blog Post (Right Sidebar) Start -->
+            <div class="col-md-9">
+                <div class="col-md-12 page-body">
+                    <div class="row">
+                        <div class="sub-title">
+                            <a href="../index.html" title="Go to Home Page">
+                                <h2>홈으로 가기</h2>
+                            </a>
+                            <a href="#comment" class="smoth-scroll"><i class="icon-bubbles"></i></a>
+                        </div>
+
+                        <div class="col-md-12 content-page">
+                            <div class="col-md-12 blog-post">
+                                <!-- Post Headline Start -->
+                                <div class="post-title">
+                                    <h1>💻 HTTP 메서드를 만들기</h1>
+                                </div>
+                                <!-- Post Headline End -->
+
+                                <!-- Post Detail Start -->
+                                <div class="post-info">
+                                        <span>2023. 10. 1 작성자:
+                                            <a href="../contact.html" target="_blank">임직찬</a></span>
+                                </div>
+                                <!-- Post Detail End -->
+
+                                <p></p>
+                                <h1 style="font-size: 1.6875em; margin: 60px 0 19px">
+                                    💻 클라이언트에서 서버로 데이터 전송 방식
+                                </h1>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding: 0 0 0 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        <strong>쿼리 파라미터로 데이터 전송</strong><br />GET
+                                        방식에서 사용, 주로 정렬 필터와 같은 검색어 관련에서
+                                        사용
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        <strong>메시지 바디를 통한 데이터 전송</strong><br />POST, PUT, PATCH 방식에서 사용, 회원 가입, 상품
+                                        주문, 리소스 등록, 리소스 변경 와 같은 곳에서 사용
+                                    </li>
+                                </ul>
+                                <hr style="
+                        display: block;
+                        height: 0;
+                        border: 0;
+                        border-bottom: 1px solid #000;
+                      " />
+                                <h1 style="font-size: 1.6875em; margin: 60px 0 19px">
+                                    💻 클라이언트에서 서버로 데이터 전송 상황
+                                </h1>
+                                <ol style="margin-bottom: 50px; list-style: inside decimal">
+                                    <li style="
+                          position: relative;
+                          padding-left: 16px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -15px;
+                          list-style: inherit;
+                        ">
+                                        <strong>정적 데이터 조회</strong><br />ex) 이미지, 정적
+                                        텍스트 문서
+                                    </li>
+                                    <li style="
+                          position: relative;
+                          padding-left: 16px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -15px;
+                          list-style: inherit;
+                        ">
+                                        <strong>동적 데이터 조회</strong><br />ex) 주로 검색,
+                                        게시판 목록에서 정렬 필터(검색어)
+                                    </li>
+                                    <li style="
+                          position: relative;
+                          padding-left: 16px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -15px;
+                          list-style: inherit;
+                        ">
+                                        <strong>HTML Form을 통한 데이터 전송</strong><br />ex)
+                                        회원가입,상품주문,데이터변경
+                                    </li>
+                                    <li style="
+                          position: relative;
+                          padding-left: 16px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -15px;
+                          list-style: inherit;
+                        ">
+                                        <strong>HTTP API를 통한 데이터 전송</strong><br />ex)
+                                        ****회원가입,상품주문,데이터변경 or 서버 to 서버, 앱
+                                        클라이언트, 웹 클라이언트(Ajax)
+                                    </li>
+                                </ol>
+                                <hr style="
+                        display: block;
+                        height: 0;
+                        border: 0;
+                        border-bottom: 1px solid #000;
+                      " />
+                                <h2 style="font-size: 1.5em; margin: 60px 0 19px">
+                                    🧩 정적 데이터 조회
+                                </h2>
+                                <p style="
+                        font-size: 0.9375em;
+                        line-height: 1.6;
+                        color: #666;
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        margin-top: 0 !important;
+                      "></p>
+                                <figure width="100%" style="
+                        margin: 0 auto 20px;
+                        max-width: 100%;
+                        clear: both;
+                        display: table;
+                        position: relative;
+                        text-align: center;
+                      ">
+                                        <span style="cursor: pointer"><img src="https://blog.kakaocdn.net/dn/eExh0T/btsoSnLEOKD/ZolgbDfBWVZkGkhKIcYRJk/img.png" width="100%" style="
+                            border: none;
+                            vertical-align: top;
+                            max-width: 100% !important;
+                            display: inline-block;
+                            height: auto;
+                            margin-top: 36px;
+                          " /></span>
+                                </figure>
+                                <p></p>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        일반적으로 정적 데이터( 이미지, 정적 텍스트 문서) 같은
+                                        경우는 쿼리 파라미터 없이 사용이 가능하다.
+                                    </li>
+                                </ul>
+                                <hr style="
+                        display: block;
+                        height: 0;
+                        border: 0;
+                        border-bottom: 1px solid #000;
+                      " />
+                                <h2 style="font-size: 1.5em; margin: 60px 0 19px">
+                                    🧩 동적 데이터 조회
+                                </h2>
+                                <p style="
+                        font-size: 0.9375em;
+                        line-height: 1.6;
+                        color: #666;
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        margin-top: 0 !important;
+                      "></p>
+                                <figure width="100%" style="
+                        margin: 0 auto 20px;
+                        max-width: 100%;
+                        clear: both;
+                        display: table;
+                        position: relative;
+                        text-align: center;
+                      ">
+                                        <span style="cursor: pointer"><img src="https://blog.kakaocdn.net/dn/qrsMj/btsoZoCfO8P/ADxHWxVmBwuOQhMSKdGgE0/img.png" width="100%" style="
+                            border: none;
+                            vertical-align: top;
+                            max-width: 100% !important;
+                            display: inline-block;
+                            height: auto;
+                            margin-top: 36px;
+                          " /></span>
+                                </figure>
+                                <p></p>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        주로 검색, 게시판 목록에서 정렬 필터(검색어를 통한)
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        조회 조건을 줄여주는 필터, 조회 결과를 정렬하는 정렬
+                                        조건에 주로 사용
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        조회는 GET을 사용하거, 쿼리파라미터를 이용해서 데이터를
+                                        전달하게 된다.
+                                    </li>
+                                </ul>
+                                <hr style="
+                        display: block;
+                        height: 0;
+                        border: 0;
+                        border-bottom: 1px solid #000;
+                      " />
+                                <h2 style="font-size: 1.5em; margin: 60px 0 19px">
+                                    🧩 <strong></strong><strong>HTML Form 데이터 전송</strong>
+                                </h2>
+                                <p style="
+                        font-size: 0.9375em;
+                        line-height: 1.6;
+                        color: #666;
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        margin-top: 0 !important;
+                      "></p>
+                                <figure width="100%" style="
+                        margin: 0 auto 20px;
+                        max-width: 100%;
+                        clear: both;
+                        display: table;
+                        position: relative;
+                        text-align: center;
+                      ">
+                                        <span style="cursor: pointer"><img src="https://blog.kakaocdn.net/dn/bUnh3J/btsoZ1mt3ql/ZReUE2tg3q9MDaTq8n6Zr1/img.png" width="100%" style="
+                            border: none;
+                            vertical-align: top;
+                            max-width: 100% !important;
+                            display: inline-block;
+                            height: auto;
+                            margin-top: 36px;
+                          " /></span>
+                                </figure>
+                                <p></p>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        HTML Form을 이용해서 데이터를 전송할때는 바디값안에 키와
+                                        클라이언트가 입력한 밸류값을 이용해서 전달한다.
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        <strong>Content-Type이란</strong> 정보를 받는
+                                        클라이언트에게 데이터의 형태를 명시하는 역활을 하게
+                                        됩니다.
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        <strong>application/x-www-form-urlencoded</strong>는
+                                        바디값의 데이터를 “key=value &amp;&amp; key=value”이런
+                                        형식으로 지정하는 역활을 하게 됩니다.
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        전송되는 데이터를 url encoding처리를 하게 됩니다<br />ex)
+                                        abc김 -&gt; abc%EA%B9%80
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        GET, POST 만 지원한다.
+                                    </li>
+                                </ul>
+                                <h3 style="
+                        font-size: 1.3125em;
+                        margin: 60px 0 19px;
+                        font-weight: 700;
+                      ">
+                                    ❓ multipart/form-data이란 무엇일까?
+                                </h3>
+                                <p style="
+                        font-size: 0.9375em;
+                        line-height: 1.6;
+                        color: #666;
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        margin-top: 0 !important;
+                      "></p>
+                                <figure width="100%" style="
+                        margin: 0 auto 20px;
+                        max-width: 100%;
+                        clear: both;
+                        display: table;
+                        position: relative;
+                        text-align: center;
+                      ">
+                                        <span style="cursor: pointer"><img src="https://blog.kakaocdn.net/dn/bt3HqG/btsoTqgUItm/cm2jFsR0LIGDuJGonTvQJk/img.png" width="100%" style="
+                            border: none;
+                            vertical-align: top;
+                            max-width: 100% !important;
+                            display: inline-block;
+                            height: auto;
+                            margin-top: 36px;
+                          " /></span>
+                                </figure>
+                                <p></p>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        파일 형식을 전송하기 위한 content-type
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        키값을 기준으로 웹 브라우저가 알아서 경계를 나누어줌
+                                    </li>
+                                </ul>
+                                <hr style="
+                        display: block;
+                        height: 0;
+                        border: 0;
+                        border-bottom: 1px solid #000;
+                      " />
+                                <h2 style="font-size: 1.5em; margin: 60px 0 19px">
+                                    🧩 <strong></strong><strong>HTML API 데이터 전송</strong>
+                                </h2>
+                                <p style="
+                        font-size: 0.9375em;
+                        line-height: 1.6;
+                        color: #666;
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        margin-top: 0 !important;
+                      "></p>
+                                <figure width="100%" style="
+                        margin: 0 auto 20px;
+                        max-width: 100%;
+                        clear: both;
+                        display: table;
+                        position: relative;
+                        text-align: center;
+                      ">
+                                        <span style="cursor: pointer"><img src="https://blog.kakaocdn.net/dn/Tn2Gj/btsoTmlq0eX/TKjOJrs0hLNuQCDiY1fHN1/img.png" width="100%" style="
+                            border: none;
+                            vertical-align: top;
+                            max-width: 100% !important;
+                            display: inline-block;
+                            height: auto;
+                            margin-top: 36px;
+                          " /></span>
+                                </figure>
+                                <p></p>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        서버에서 서버로 통신이나, 앱 or 웹 클라이언트 통신에
+                                        사용
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        POST, PUT, PATCH등의 메시지 바디를 통해 데이터 전송이
+                                        가능함
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        Content-Type: application/json을 주로 사용
+                                    </li>
+                                </ul>
+                                <blockquote data-ke-style="style1" style="
+                        padding: 16px 20px;
+                        margin-bottom: 60px;
+                        border-left: 4px solid #e6e6e6;
+                      ">
+                                    <p style="
+                          margin: 22px 0 0;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          margin-top: 0 !important;
+                          padding-top: 0 !important;
+                          padding-bottom: 0 !important;
+                        ">
+                                        <span style="font-family: 'Noto Serif KR'"></span>
+                                    </p>
+                                    <p style="
+                          margin: 22px 0 0;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          margin-top: 0 !important;
+                          padding-top: 0 !important;
+                          padding-bottom: 0 !important;
+                        ">
+                                        공부를 하다보니 form 이랑 api가 뭐가 다른지 언제
+                                        사용하는지 의문이 생겼다?
+                                    </p>
+                                    <p></p>
+                                </blockquote>
+                                <p style="
+                        font-size: 0.9375em;
+                        line-height: 1.6;
+                        color: #666;
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        margin-top: 0 !important;
+                      ">
+                                    구글링을 통해 의문을 해결할 수 있었는데
+                                </p>
+                                <p style="
+                        font-size: 0.9375em;
+                        line-height: 1.6;
+                        color: #666;
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        margin-top: 0 !important;
+                      ">
+                                    form → 리턴값이 HTML로 응답<br />api → 리턴값이 데이터
+                                </p>
+                                <p style="
+                        font-size: 0.9375em;
+                        line-height: 1.6;
+                        color: #666;
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        margin-top: 0 !important;
+                      ">
+                                    단. form사용시도 응답값을 데이터로 받을수 있다고는 하는데,
+                                    그런 경우는 거의없다고 한다.
+                                </p>
+                                <blockquote data-ke-style="style1" style="
+                        padding: 16px 20px;
+                        margin-bottom: 60px;
+                        border-left: 4px solid #e6e6e6;
+                      ">
+                                    <p style="
+                          margin: 22px 0 0;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          margin-top: 0 !important;
+                          padding-top: 0 !important;
+                          padding-bottom: 0 !important;
+                        ">
+                                        <span style="font-family: 'Noto Serif KR'"></span>
+                                    </p>
+                                </blockquote>
+                                <hr style="
+                        display: block;
+                        height: 0;
+                        border: 0;
+                        border-bottom: 1px solid #000;
+                      " />
+                                <h1 style="font-size: 1.6875em; margin: 60px 0 19px">
+                                    💻 HTTP 설계 예시
+                                </h1>
+                                <h2 style="font-size: 1.5em; margin: 60px 0 19px">
+                                    🧩 HTTP API- 컬렉션 (POST 기반 등록)
+                                </h2>
+                                <p style="
+                        font-size: 0.9375em;
+                        line-height: 1.6;
+                        color: #666;
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        margin-top: 0 !important;
+                      "></p>
+                                <figure width="100%" style="
+                        margin: 0 auto 20px;
+                        max-width: 100%;
+                        clear: both;
+                        display: table;
+                        position: relative;
+                        text-align: center;
+                      ">
+                                        <span style="cursor: pointer"><img src="https://blog.kakaocdn.net/dn/bB5tc3/btsoZZWvuVm/xg0hXpWAk7c9lBTXU79PiK/img.png" width="100%" style="
+                            border: none;
+                            vertical-align: top;
+                            max-width: 100% !important;
+                            display: inline-block;
+                            height: auto;
+                            margin-top: 36px;
+                          " /></span>
+                                </figure>
+                                <p></p>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        클라이언트는 등록될 리소스의 URI를 모른다.<br />/members
+                                        만하여도 회원등록이 되는것 처럼, 클라이언트는 서버에게
+                                        POST를 통해서 하위 URI만 던져주어도 서버가 알아서 특정
+                                        URI에 회원 리소스를 등록해준다.
+                                    </li>
+                                </ul>
+                                <blockquote data-ke-style="style1" style="
+                        padding: 16px 20px;
+                        margin-bottom: 60px;
+                        border-left: 4px solid #e6e6e6;
+                      ">
+                                    <p style="
+                          margin: 22px 0 0;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          margin-top: 0 !important;
+                          padding-top: 0 !important;
+                          padding-bottom: 0 !important;
+                        ">
+                                        <span style="font-family: 'Noto Serif KR'"></span>
+                                    </p>
+                                    <p style="
+                          margin: 22px 0 0;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          margin-top: 0 !important;
+                          padding-top: 0 !important;
+                          padding-bottom: 0 !important;
+                        ">
+                                        우리는 이런 방식을 <strong>컬렉션</strong> 방식이라고
+                                        부른다.
+                                    </p>
+                                    <p></p>
+                                </blockquote>
+                                <h3 style="
+                        font-size: 1.3125em;
+                        margin: 60px 0 19px;
+                        font-weight: 700;
+                      ">
+                                    ❓컬렉션 이란
+                                </h3>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        서버가 관리하는 리소스 디렉토리
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        서버가 리소스의 URI를 생성하고 관리한다.
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        위 예시에서는 컬렉션이 /members 이다.
+                                    </li>
+                                </ul>
+                                <hr style="
+                        display: block;
+                        height: 0;
+                        border: 0;
+                        border-bottom: 1px solid #000;
+                      " />
+                                <h2 style="font-size: 1.5em; margin: 60px 0 19px">
+                                    🧩 HTTP API- 컬렉션 (PUT 기반 등록)
+                                </h2>
+                                <p style="
+                        font-size: 0.9375em;
+                        line-height: 1.6;
+                        color: #666;
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        margin-top: 0 !important;
+                      "></p>
+                                <figure width="100%" style="
+                        margin: 0 auto 20px;
+                        max-width: 100%;
+                        clear: both;
+                        display: table;
+                        position: relative;
+                        text-align: center;
+                      ">
+                                        <span style="cursor: pointer"><img src="https://blog.kakaocdn.net/dn/dhHXQn/btsoU6CtG4J/Bc7tZCHuxU8DrNkFsaIOq0/img.png" width="100%" style="
+                            border: none;
+                            vertical-align: top;
+                            max-width: 100% !important;
+                            display: inline-block;
+                            height: auto;
+                            margin-top: 36px;
+                          " /></span>
+                                </figure>
+                                <p></p>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        POST 방식과 큰차이는 클라이언트가 등록될 리소스 URI를
+                                        알고 있다는 점이다.<br />/files/{filename} 처럼 리소스
+                                        URI를 정확하게 입력하여야 파일이 등록이 된다.
+                                    </li>
+                                </ul>
+                                <blockquote data-ke-style="style1" style="
+                        padding: 16px 20px;
+                        margin-bottom: 60px;
+                        border-left: 4px solid #e6e6e6;
+                      ">
+                                    <p style="
+                          margin: 22px 0 0;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          margin-top: 0 !important;
+                          padding-top: 0 !important;
+                          padding-bottom: 0 !important;
+                        ">
+                                        <span style="font-family: 'Noto Serif KR'"></span>
+                                    </p>
+                                    <p style="
+                          margin: 22px 0 0;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          margin-top: 0 !important;
+                          padding-top: 0 !important;
+                          padding-bottom: 0 !important;
+                        ">
+                                        우리는 이러 방식을 <strong>스토어</strong> 방식이라고
+                                        부른다.
+                                    </p>
+                                    <p></p>
+                                </blockquote>
+                                <h3 style="
+                        font-size: 1.3125em;
+                        margin: 60px 0 19px;
+                        font-weight: 700;
+                      ">
+                                    ❓스토어 이란
+                                </h3>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        클라이언트가 관리하는 리소스 저장소
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        클라이언트가 리소스의 URI를 알고 관리
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        여기서 스토어는 /files
+                                    </li>
+                                </ul>
+                                <hr style="
+                        display: block;
+                        height: 0;
+                        border: 0;
+                        border-bottom: 1px solid #000;
+                      " />
+                                <h2 style="font-size: 1.5em; margin: 60px 0 19px">
+                                    🧩 HTML FORM 사용
+                                </h2>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        <p style="
+                            font-size: 0.9375em;
+                            line-height: 1.6;
+                            color: #666;
+                            padding-top: 0 !important;
+                            padding-bottom: 0 !important;
+                            margin-top: 0 !important;
+                          ">
+                                            HTML FORM은 GET, POST 만 지원
+                                        </p>
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        <p style="
+                            font-size: 0.9375em;
+                            line-height: 1.6;
+                            color: #666;
+                            padding-top: 0 !important;
+                            padding-bottom: 0 !important;
+                            margin-top: 0 !important;
+                          ">
+                                            당연히 GET, POST만 사용가능 하므로, 제약이있음
+                                        </p>
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        <p style="
+                            font-size: 0.9375em;
+                            line-height: 1.6;
+                            color: #666;
+                            padding-top: 0 !important;
+                            padding-bottom: 0 !important;
+                            margin-top: 0 !important;
+                          ">
+                                            ❓ 제약을 어떻게 해결할까?
+                                        </p>
+                                        <ul style="margin-bottom: 50px; list-style: disc inside">
+                                            <li style="
+                              list-style: inherit;
+                              position: relative;
+                              padding-left: 22px;
+                              font-size: 0.9375em;
+                              line-height: 1.6;
+                              color: #666;
+                              text-indent: -22px;
+                            ">
+                                                동사로된 리소스 경로 사용
+                                            </li>
+                                            <li style="
+                              list-style: inherit;
+                              position: relative;
+                              padding-left: 22px;
+                              font-size: 0.9375em;
+                              line-height: 1.6;
+                              color: #666;
+                              text-indent: -22px;
+                            ">
+                                                그러한 리소스 경로를
+                                                <strong>컨트롤 URI</strong> 라고함
+                                            </li>
+                                            <li style="
+                              list-style: inherit;
+                              position: relative;
+                              padding-left: 22px;
+                              font-size: 0.9375em;
+                              line-height: 1.6;
+                              color: #666;
+                              text-indent: -22px;
+                            ">
+                                                /new, /edit, /delete가 <strong>컨트롤 URI</strong>의
+                                                예시
+                                            </li>
+                                            <li style="
+                              list-style: inherit;
+                              position: relative;
+                              padding-left: 22px;
+                              font-size: 0.9375em;
+                              line-height: 1.6;
+                              color: #666;
+                              text-indent: -22px;
+                            ">
+                                                HTTP 메서드로 해결하기 애매한 경우에 사용하게 됨
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p style="
+                        font-size: 0.9375em;
+                        line-height: 1.6;
+                        color: #666;
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        margin-top: 0 !important;
+                      "></p>
+                                <figure width="100%" style="
+                        margin: 0 auto 20px;
+                        max-width: 100%;
+                        clear: both;
+                        display: table;
+                        position: relative;
+                        text-align: center;
+                      ">
+                                        <span style="cursor: pointer"><img src="https://blog.kakaocdn.net/dn/UmniV/btsoZnXC73E/mp7RVUqOa1pmTbZO9my9yK/img.png" width="100%" style="
+                            border: none;
+                            vertical-align: top;
+                            max-width: 100% !important;
+                            display: inline-block;
+                            height: auto;
+                            margin-top: 36px;
+                          " /></span>
+                                </figure>
+                                <p></p>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        여기서 /new, /edit, /delete 같은 컨트롤 URI 의 사용으로
+                                        GET, POST 만 사용할 수 있는 HTML FORM의 한계를 극복함
+                                    </li>
+                                </ul>
+                                <hr style="
+                        display: block;
+                        height: 0;
+                        border: 0;
+                        border-bottom: 1px solid #000;
+                      " />
+                                <h1 style="font-size: 1.6875em; margin: 60px 0 19px">
+                                    📌 정리
+                                </h1>
+                                <p style="
+                        font-size: 0.9375em;
+                        line-height: 1.6;
+                        color: #666;
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        margin-top: 0 !important;
+                      ">
+                                    참고하기 좋은 URI 설계 개념
+                                </p>
+                                <ol style="margin-bottom: 50px; list-style: inside decimal">
+                                    <li style="
+                          position: relative;
+                          padding-left: 16px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -15px;
+                          list-style: inherit;
+                        ">
+                                        <strong>문서</strong>
+                                    </li>
+                                </ol>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        단일 개념(파일 하나, 객체 인스턴스, 데이터베이스 row)
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        예) /members/100, /files/star.jpg
+                                    </li>
+                                </ul>
+                                <ol style="margin-bottom: 50px; list-style: inside decimal">
+                                    <li style="
+                          position: relative;
+                          padding-left: 16px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -15px;
+                          list-style: inherit;
+                        ">
+                                        <strong>컬렉션</strong>
+                                    </li>
+                                </ol>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        서버가 관리하는 리소스 디렉터리
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        서버가 리소스의 URI를 생성하고 관리
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        예) /members
+                                    </li>
+                                </ul>
+                                <ol style="margin-bottom: 50px; list-style: inside decimal">
+                                    <li style="
+                          position: relative;
+                          padding-left: 16px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -15px;
+                          list-style: inherit;
+                        ">
+                                        <strong>스토어</strong>
+                                    </li>
+                                </ol>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        클라이언트가 관리하는 자원 저장소
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        클라이언트가 리소스의 URI를 알고 관리
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        예) /files
+                                    </li>
+                                </ul>
+                                <ol style="margin-bottom: 50px; list-style: inside decimal">
+                                    <li style="
+                          position: relative;
+                          padding-left: 16px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -15px;
+                          list-style: inherit;
+                        ">
+                                        <strong>컨트롤러, 컨트롤URI</strong>
+                                    </li>
+                                </ol>
+                                <ul style="margin-bottom: 50px; list-style: disc inside">
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        문서, 컬렉션, 스토어로 해결하기 어려운 추가 프로세스
+                                        실행
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        동사를 직접 사용
+                                    </li>
+                                    <li style="
+                          list-style: inherit;
+                          position: relative;
+                          padding-left: 22px;
+                          font-size: 0.9375em;
+                          line-height: 1.6;
+                          color: #666;
+                          text-indent: -22px;
+                        ">
+                                        예) /members/{id}/delete
+                                    </li>
+                                </ul>
+                                <hr style="
+                        display: block;
+                        height: 0;
+                        border: 0;
+                        border-bottom: 1px solid #000;
+                      " />
+                                <p style="
+                        font-size: 0.9375em;
+                        line-height: 1.6;
+                        color: #666;
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        margin-top: 0 !important;
+                      ">
+                                    출처: 김영한님 '모든 개발자를 위한 HTTP 웹 기본지식'
+                                </p>
+
+                                <br /><br /><br />
+                                <!-- Post Blockquote Start -->
+                                <div class="post-quote margin-top-40 margin-bottom-40">
+                                    <blockquote>힘내라힘</blockquote>
+                                </div>
+                                <!-- Post Blockquote End -->
+
+                                <!-- Post Author Bio Box Start -->
+                                <div class="about-author margin-top-70 margin-bottom-50">
+                                    <div class="picture">
+                                        <img src="../images/testimonial/cute-totoro.png" class="img-responsive" alt="" />
+                                    </div>
+
+                                    <div class="c-padding">
+                                        <h3>
+                                            <a href="../contact.html" target="_blank" data-toggle="tooltip" data-placement="top" title="임직찬의 블로그 보기">임직찬</a>
+                                        </h3>
+                                        <p>
+                                            느리지만 무너지지 않게 쌓아올리는 개발자가 되겠습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Post Author Bio Box End -->
+
+                                <!-- You May Also Like Start -->
+                                <div class="you-may-also-like margin-top-50 margin-bottom-50">
+                                    <h3>나의 다른 게시물</h3>
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-6 col-xs-12">
+                                            <a href="httpMethod.html">
+                                                <p>
+                                                    Make mailchimp singup form working with ajax using
+                                                    jquery plugin
+                                                </p>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-6 col-xs-12">
+                                            <a href="httpMethod.html">
+                                                <p>
+                                                    How to design elegant e-mail newsletter in html
+                                                    for wish christmas to your subscribers?
+                                                </p>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-6 col-xs-12">
+                                            <a href="httpMethod.html">
+                                                <p>
+                                                    How to customize a wordpress theme entirely from
+                                                    scratch using a child theme?
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- You May Also Like End -->
+
+                                <!-- Post Comment (Disqus) Start -->
+                                <div id="comment" class="comment">
+                                    <h3>레퍼런스</h3>
+
+                                    <!-- Disqus Code Start  (Please Note: Disqus will not be load on local, You have to upload it on server.)-->
+                                    <div id="disqus_thread"></div>
+                                    <script>
+                                        /***  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS. LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables.
+
+                                         var disqus_config = function () {
+							this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+							this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+							};
+                                         */
+
+                                        (function() {
+                                            // DON'T EDIT BELOW THIS LINE
+                                            var d = document,
+                                                s = d.createElement("script");
+                                            s.src = "//uipasta.disqus.com/embed.js"; // Please change the url from your own disqus id
+                                            s.setAttribute("data-timestamp", +new Date());
+                                            (d.head || d.body).appendChild(s);
+                                        })();
+                                    </script>
+                                    <noscript>Please enable JavaScript to view the
+                                        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                    <!-- Disqus Code End -->
+                                </div>
+                                <!-- Post Comment (Disqus) End -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subscribe Form Start -->
+                    <div class="col-md-8 col-md-offset-2">
+                        <form id="mc-form" method="post" action="http://localhost:8080/mail/send">
+                            <div class="subscribe-form margin-top-20">
+                                <input id="mc-email" name="email" type="email" placeholder="Email Address" class="text-input">
+                                <button id="submit-btn" class="submit-btn" type="submit">전송</button>
+                            </div>
+                            <p>주간 뉴스 구독하기</p>
+                            <label for="mc-email" class="mc-label"></label>
+                        </form>
+
+                    </div>
+                    <!-- Subscribe Form End -->
+                </div>
+
+                <!-- Footer Start -->
+                <div class="col-md-12 page-body margin-top-50 footer">
+                    <footer>
+                        <ul class="menu-link">
+                            <li><a href="../index.html">홈</a></li>
+                            <li><a href="../about.html">나에 대해</a></li>
+                            <li><a href="../work.html">포트폴리오</a></li>
+                            <li><a href="../contact.html">연락하기</a></li>
+                        </ul>
+
+                        <p>© Copyright 2016 DevBlog. All rights reserved</p>
+
+                        <!-- UiPasta Credit Start -->
+                        <div class="uipasta-credit">
+                            <i class="fa fa-love"></i><a href="https://github.com/jickDo">나에 대해 궁금하다면?</a>
+                        </div>
+                        <!-- UiPasta Credit End -->
+                    </footer>
+                </div>
+                <!-- Footer End -->
+            </div>
+            <!-- Blog Post (Right Sidebar) End -->
+        </div>
+    </div>
+</div>
+
+<!-- Endpage Box (Popup When Scroll Down) Start -->
+<div id="scroll-down-popup" class="endpage-box">
+    <h4>처음부터 읽기</h4>
+    <a href="#">HTTP 전송 방식</a>
+</div>
+<!-- Endpage Box (Popup When Scroll Down) End -->
+
+<!-- Back to Top Start -->
+<a href="#" class="scroll-to-top"><i class="fa fa-long-arrow-up"></i></a>
+<!-- Back to Top End -->
+
+<!-- All Javascript Plugins  -->
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/plugin.js"></script>
+
+<!-- Main Javascript File  -->
+<script type="text/javascript" src="../js/scripts.js"></script>
+
+<!-- Syntax Highlighter Javascript File  -->
+<script type="text/javascript" src="../js/syntax/shCore.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushCss.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushJScript.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushPerl.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushPhp.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushPlain.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushPython.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushRuby.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushSql.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushVb.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushXml.js"></script>
+<script type="text/javascript" src="../js/newsToUser.js"></script>
+
+<!-- Syntax Highlighter Call Function -->
+<script type="text/javascript">
+    SyntaxHighlighter.config.clipboardSwf = "js/syntax/clipboard.swf";
+    SyntaxHighlighter.all();
+</script>
+</body>
+
+</html>

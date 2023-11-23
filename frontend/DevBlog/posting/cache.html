@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tag -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO -->
+    <meta name="description" content="150 words" />
+    <meta name="author" content="uipasta" />
+    <meta name="url" content="http://www.yourdomainname.com" />
+    <meta name="copyright" content="company name" />
+    <meta name="robots" content="index,follow" />
+
+    <title>기술블로그 - 나의 기록일기</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="../images/favicon/apple-touch-icon.png" />
+
+    <!-- All CSS Plugins -->
+    <link rel="stylesheet" type="text/css" href="../css/plugin.css" />
+
+    <!-- Main CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+    <!-- Google Web Fonts  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700" />
+
+    <!-- Syntax Highlighter  -->
+    <link rel="stylesheet" type="text/css" href="../css/syntax/shCore.css" />
+    <link rel="stylesheet" type="text/css" href="../css/syntax/shThemeDefault.css" />
+
+    <!-- HTML5 shiv and Respond.js support IE8 or Older for HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<!-- Preloader Start -->
+<div class="preloader">
+    <div class="rounder"></div>
+</div>
+<!-- Preloader End -->
+
+<div id="main">
+    <div class="container">
+        <div class="row">
+            <!-- About Me (Left Sidebar) Start -->
+            <div class="col-md-3">
+                <div class="about-fixed">
+                    <div class="my-pic">
+                        <img src="../images/pic/cute-mouse.png" alt="" />
+                        <a href="javascript:void(0)" class="collapsed" data-target="#menu" data-toggle="collapse"><i class="icon-menu menu"></i></a>
+                        <div id="menu" class="collapse">
+                            <ul class="menu-link">
+                                <li><a href="../about.html">나에 관해</a></li>
+                                <li><a href="../work.html">포트폴리오</a></li>
+                                <li><a href="../contact.html">연락하기</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="my-detail">
+                        <div class="white-spacing">
+                            <h1>임직찬</h1>
+                            <span>백엔드 개발자</span>
+                        </div>
+
+                        <ul class="social-icon">
+                            <li>
+                                <a href="#" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/jickDo" target="_blank" class="github"><i class="fa fa-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- About Me (Left Sidebar) End -->
+
+            <!-- Blog Post (Right Sidebar) Start -->
+            <div class="col-md-9">
+                <div class="col-md-12 page-body">
+                    <div class="row">
+                        <div class="sub-title">
+                            <a href="../index.html" title="Go to Home Page">
+                                <h2>홈으로 가기</h2>
+                            </a>
+                            <a href="#comment" class="smoth-scroll"><i class="icon-bubbles"></i></a>
+                        </div>
+
+                        <div class="col-md-12 content-page">
+                            <div class="col-md-12 blog-post">
+                                <!-- Post Headline Start -->
+                                <div class="post-title">
+                                    <h1>💻 HTTP 캐쉬</h1>
+                                </div>
+                                <!-- Post Headline End -->
+
+                                <!-- Post Detail Start -->
+                                <div class="post-info">
+                                        <span>2023. 8. 1 작성자:
+                                            <a href="../contact.html" target="_blank">임직찬</a></span>
+                                </div>
+                                <!-- Post Detail End -->
+
+
+                                <h2 style="font-size: 1.5em;margin: 60px 0 19px;font-weight: normal;">💻 캐시</h2>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h3 style="font-size: 1.3125em;margin: 60px 0 19px;font-weight: normal;">🧩 캐시가 없을때 웹 브라우저의 요청</h3>
+                                <h4 style="font-size: 1.125em;margin: 60px 0 19px;font-weight: normal;">🕹 첫번째 요청</h4>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span data-alt="웹 브라우저가 서버에게 star.jpg 사진을 요청하는 모습" style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/yN2wi/btso5YZnZTY/5weBuvJvF4ZNzxruNroHoK/img.png" width="611" height="218" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span><figcaption style="display: block;font-size: 13px;word-break: break-word;padding-top: 10px;min-height: 20px;caption-side: bottom;text-align: center;">웹 브라우저가 서버에게 star.jpg 사진을 요청하는 모습</figcaption>
+                            </figure>
+                                <figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span data-alt="서버가 반환하는 헤더와 바디의 모습" style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/bpcRmA/btso6pPMva8/nhMfk1phOQ8lVsmHfKvgq0/img.png" width="568" height="206" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span><figcaption style="display: block;font-size: 13px;word-break: break-word;padding-top: 10px;min-height: 20px;caption-side: bottom;text-align: center;">서버가 반환하는 헤더와 바디의 모습</figcaption>
+                                </figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">첫 번째 요청은 지금까지 본 클라이언트-서버의 모습이다. 웹 브라우저는 서버측에 GET메서드를 통해 star.jpg의 데이터를 요청하고 서버는 200 상태코드를 포함한 스타트라인, 헤더, 바디를 반환하는 모습을 볼 수 있다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h4 style="color: #000000;text-align: start;font-size: 1.125em;margin: 60px 0 19px;font-weight: normal;">🕹 두번째 요청</h4>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span data-alt="같은 요청을 한번더 하는 모습이다." style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/bo2mIy/btspcvH6eeo/sArjBcbrYhNTriFybXO4MK/img.png" width="728" height="154" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span><figcaption style="display: block;font-size: 13px;word-break: break-word;padding-top: 10px;min-height: 20px;caption-side: bottom;text-align: center;">같은 요청을 한번더 하는 모습이다.</figcaption>
+                            </figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span data-alt="첫번째 결과와 같은 응답을 하는 모습이다." style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/b5qZUI/btso5tZqeqf/ekLNu18FwBULEzILkehHl1/img.png" width="658" height="235" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span><figcaption style="display: block;font-size: 13px;word-break: break-word;padding-top: 10px;min-height: 20px;caption-side: bottom;text-align: center;">첫번째 결과와 같은 응답을 하는 모습이다.</figcaption>
+                            </figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">캐시가 없다면 첫번째와 두번째 응답이 같은것을 확인할 수 있다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">흔히 볼 수 있는 모습이지만 이 방식에는 치명적인 문제가 존제한다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <blockquote data-ke-style="style2" style="padding: 16px 20px;margin-bottom: 60px;border-left: 4px solid #e6e6e6;">1. 데이터가 변경되지 않음에도 같은 데이터를 계속 다운받아야 하는 문제<br>2. 인터넷 네트워크 자원은 비싼데 느리기 까지 하다.<br>3. 계속 다운받아야 함에따라 인터넷 브라우저가 느려진다.<br>4. 사용자또한 느린 브라우저를 사용함에 따라 부정적인 경험을 하게된다.</blockquote>
+                                <p style="font-size: 1.12em;line-height: 1.6;color: #666;;;"><i><b>따라서 캐시는 필수불가결한 요건이다.</b></i></p>
+                                <h3 style="color: #000000;text-align: start;font-size: 1.3125em;margin: 60px 0 19px;font-weight: normal;">🧩 캐시가 있을때 웹 브라우저의 요청</h3>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h4 style="color: #000000;text-align: start;font-size: 1.125em;margin: 60px 0 19px;font-weight: normal;">🕹 첫번째 요청</h4>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span data-alt="웹브라우저가 서버에게 요청하는 모습이다. 이경우는 이전과 별반 다름이 없다." style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/E3Y4V/btso5td40IN/onKr2MS7607TSfMhje5nbK/img.png" width="540" height="209" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span><figcaption style="display: block;font-size: 13px;word-break: break-word;padding-top: 10px;min-height: 20px;caption-side: bottom;text-align: center;">웹브라우저가 서버에게 요청하는 모습이다. 이경우는 이전과 별반 다름이 없다.</figcaption>
+                            </figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span data-alt="서버가 반환하는 헤더와 바디부이다." style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/SzaXy/btso6qHWX9e/kyw5vjJI9sEL5E6c3zQf6K/img.png" width="602" height="270" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span><figcaption style="display: block;font-size: 13px;word-break: break-word;padding-top: 10px;min-height: 20px;caption-side: bottom;text-align: center;">서버가 반환하는 헤더와 바디부이다.</figcaption>
+                            </figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">서버는 star.jpg를 반환하게 되는데, 이전까지는 별반 차이가 없지만 서버가 반환하는 헤더에 <i><b>'cache-control: max-age' </b></i>붙이게 된다. 이것은 캐시의 수명을 나타내는 반환이다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/sOZtv/btso6bLaMDW/09Uf7ZYKFIzR9scDux4Iqk/img.png" width="462" height="180" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">요청을 받은 웹브라우저는 캐시를 저장하게 되고, 유효시간은 응답받은 헤더에 있는 시간으로 지정한다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h4 style="color: #000000;text-align: start;font-size: 1.125em;margin: 60px 0 19px;font-weight: normal;">🕹 두번째 요청</h4>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span data-alt="같은 요청이 있을때 캐시를 확인하는 모습이다." style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/bqBBbl/btso7SquuXp/kwwffSmnFtl8mGG1vOhFx1/img.png" width="366" height="371" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span><figcaption style="display: block;font-size: 13px;word-break: break-word;padding-top: 10px;min-height: 20px;caption-side: bottom;text-align: center;">같은 요청이 있을때 캐시를 확인하는 모습이다.</figcaption>
+                            </figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">같은 요청을 주었을때 웹 브라우저는 자신의 캐시를 확인하여 유효시간이 충족할때 캐시에서 데이터를 가져오는 모습을 볼 수 있다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">이와같은 모습때문에 이전에 발생하였던 문제를 해결할 수 있다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <blockquote data-ke-style="style2" style="padding: 16px 20px;margin-bottom: 60px;border-left: 4px solid #e6e6e6;">1. 캐시덕분에 유효시간동안 네트워크를 사용하지 않아도 된다.<br>2. 값비싼 자원인 네트워크 사용을 줄일 수 있다.<br>3. 브라우저의 로딩속도가 상승한다.<br>4. 사용자가 빠른 브라우저를 사용하는 경험을 할 수 있다.</blockquote>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h3 style="font-size: 1.3125em;margin: 60px 0 19px;font-weight: normal;"><b>❓ 만약에 캐시의 유효시간이 초과되면 어떻게 될까??</b><b></b></h3>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span data-alt="유효 시간 만료로 캐시접근이 거부된 상황" style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/rDM6j/btso6SRNa3Q/GL9x6AQ0mKlVKQiUU4djJK/img.png" width="499" height="467" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span><figcaption style="display: block;font-size: 13px;word-break: break-word;padding-top: 10px;min-height: 20px;caption-side: bottom;text-align: center;">유효 시간 만료로 캐시접근이 거부된 상황</figcaption>
+                            </figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">캐시의 유효시간이 초과되어 접근이 거부된 상황을 나타낸다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/bLP3P3/btso7iXanV7/oifb6eMSbhp67pSQnPoKo1/img.png" width="661" height="246" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">유효시간이 만료 되었다면 웹 브라우저는 서버측에 다시 사진을 요청하고 캐시를 받아야한다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/dEEAAQ/btso7iQpI7r/ooqXo6ahVoXmODLR4wzY00/img.png" width="651" height="290" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">응답의 헤더와 바디부도 이전의 상황과 같은 것을 볼 수 있다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <blockquote data-ke-style="style2" style="padding: 16px 20px;margin-bottom: 60px;border-left: 4px solid #e6e6e6;"><span style="background-color: #9d9d9d; color: #ffffff;">캐시가 효율적인것은 맞지만... 이러한 상황이 발생하게 되면 이것을 해결할 방안도 생기기 마련이다.<br>이것을 해결하기 위해 등장한것이, <u><i><b>검증헤더와 조건부 요청</b></i></u>이다.<br></span></blockquote>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h2 style="color: #000000;text-align: start;font-size: 1.5em;margin: 60px 0 19px;font-weight: normal;">💻&nbsp; 검증헤더와 조건부 요청</h2>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">캐시의 유효시간 만료시 고려해야 하는 상황은 두가지이다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <ol style=";margin-bottom: 50px;list-style: inside decimal;" data-ke-list-type="decimal">
+                                    <li style="position: relative;padding-left: 16px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -15px;list-style: inherit;">서버에서 기존 데이터를 변경한 경우</li>
+                                    <li style="position: relative;padding-left: 16px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -15px;list-style: inherit;">서버에서 기존 데이터를 변경하지 않은 경우</li>
+                                </ol>
+                                <h3 style="font-size: 1.3125em;margin: 60px 0 19px;font-weight: normal;">&nbsp;</h3>
+                                <h3 style="font-size: 1.3125em;margin: 60px 0 19px;font-weight: normal;">🧩 서버에서 기존 데이터를 변경하지 않은 경우</h3>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <blockquote data-ke-style="style2" style="padding: 16px 20px;margin-bottom: 60px;border-left: 4px solid #e6e6e6;">이 경우는 기존 캐시를 재사용 하는 방법을 이용할 수 있다. 하지만 서버의 데이터와 캐시의 데이터가 변함이 없었다는 사실을 증명할 필요가 있다.</blockquote>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h4 style="color: #000000;text-align: start;font-size: 1.125em;margin: 60px 0 19px;font-weight: normal;">🕹 첫번째 요청</h4>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span data-alt="데이터의 최종 수정일을 추가하여 반환하는 과정이다." style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/blDBIu/btspdtwINT8/yAIfIFK8GgoPyXIU4X3Dv1/img.png" width="585" height="223" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span><figcaption style="display: block;font-size: 13px;word-break: break-word;padding-top: 10px;min-height: 20px;caption-side: bottom;text-align: center;">데이터의 최종 수정일을 추가하여 반환하는 과정이다.</figcaption>
+                            </figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span data-alt="응답헤더에 최종수정일을 추가한 모습이다." style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/b5oRP5/btso5YrHSCJ/ofDQR7c5E65jvzuLkdhjHk/img.png" width="671" height="290" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span><figcaption style="display: block;font-size: 13px;word-break: break-word;padding-top: 10px;min-height: 20px;caption-side: bottom;text-align: center;">응답헤더에 최종수정일을 추가한 모습이다.</figcaption>
+                            </figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">캐시를 재사용하기 위해 기존캐시와 서버의 데이터가 변합이 없다는것을 증명하기 위한 방법으로, 헤더에 최종 수정일을 추가하여 웹 브라우저로 반환하는 모습이다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/bKEwOb/btso5YrIsCv/oCSEh759tkBl7QtjPn9vJ1/img.png" width="670" height="229" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">이 경우는 캐시를 저장할때 반환받은 최종 수정일을 또한 저장하게 된다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h4 style="color: #000000;text-align: start;font-size: 1.125em;margin: 60px 0 19px;font-weight: normal;">🕹 두번째 요청</h4>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span data-alt="캐시의 유효시간이 초과한 경우 서버로 최종수정일을 확인하는 모습이다." style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/Vvd41/btspdskhTMk/U0F4hIKg8KTDIMx6z9UTYK/img.png" width="672" height="286" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span><figcaption style="display: block;font-size: 13px;word-break: break-word;padding-top: 10px;min-height: 20px;caption-side: bottom;text-align: center;">캐시의 유효시간이 초과한 경우 서버로 최종수정일을 확인하는 모습이다.</figcaption>
+                            </figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">브라우저 캐시의 유효시간이 만료된 경우에는 <i><b>if-modified-since</b></i>를 헤드에 포함하여 서버로 보내게 된다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/dxIvgX/btso7R6cPmL/B5C3y73f2kuHje8qIzwN20/img.png" width="620" height="194" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">서버의 데이터와 캐시의 데이터의 최종 수정일이 동일하게 되면, 데이터가 수정되지 않았다는 뜻이다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/bU3oYj/btspcvuImKu/gMMK9ofOz26onQ0x24U0T1/img.png" width="588" height="303" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">최종 수정일이 같다는 결론이 나오면 서버는 304 코드를 발송하고 바디부를 없애고 보내게 된다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">이경우 바디의 데이터가 줄게되어 훨씬 적은양이 데이터를 반환하게 되는것이다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h3 style="font-size: 1.3125em;margin: 60px 0 19px;font-weight: normal;">📌 실제 예시</h3>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/xat9V/btso5szBk3p/kKEBTCXskN4TwMMfsLjIrK/img.png" width="500" height="430" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">위 사진은 구글에서 인프런을 검색후 관리자 창을 열어본 모습이다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">상태코드가 회색인 것은 쿠키에서 가져온 값이란 뜻이다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/t5bK5/btspdtDwiYk/6d00XUu5QXv8BkXhcxyjyk/img.png" width="709" height="117" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">아무 이미지나 클릭후 새로고침을 하게되면 상태코드가 304로 바뀐것을 볼 수 있다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">어떠한 변경없이 새로고침을 하였고, 쿠키또한 변경이 없었으니 304상태코드를 반환한것을 알 수 있다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h3 style="font-size: 1.3125em;margin: 60px 0 19px;font-weight: normal;">📌 추가적인 검증헤더와 조건부 요청 헤더</h3>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">검증헤더
+                                        <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">캐시 데이터와 서버 데이터가 같은지 검증하는 데이터</li>
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">Last-Modified , ETag</li>
+                                        </ul>
+                                    </li>
+                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">조건부 요청 헤더
+                                        <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">검증헤더로 조건에 따른 분기</li>
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">If-Modified-Since: Last-Modified 사용</li>
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">If-None-Match: ETag 사용</li>
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">조건이 만족하면 200OK</li>
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">조건이 만족하지 않으면 304 Not Modified</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p style="font-size: 1.12em;line-height: 1.6;color: #666;;;"><i><b>🛠 예시</b></i></p>
+                                <div style="">
+                                    <div style="background-color: #ffffff;">
+                                        <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">If-Modified-Since: 이후에 데이터가 수정되었으면?
+                                                <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">데이터 미변경 예시
+                                                        <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">캐시<span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">: 2020</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">년 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">11</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">월 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">10</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">일 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">10:00:00 vs </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">서버</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">: 2020</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">년 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">11</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">월 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">10</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">일 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">10:00:00 </span></li>
+                                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">304 Not Modified</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">, </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">헤더 데이터만 전송</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">(BODY </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">미포함</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">)</span></li>
+                                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">전송 용량 <span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">0.1M (</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">헤더 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">0.1M)</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;"></span></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">데이터 변경 예시
+                                                        <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">캐시<span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">: 2020</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">년 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">11</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">월 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">10</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">일 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">10:00:00 vs </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">서버</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">: 2020</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">년 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">11</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">월 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">10</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">일 </span><span style="color: #ee220c;">11</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">:00:00 </span></li>
+                                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">200 OK</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">, </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">모든 데이터 전송</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">(BODY </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">포함</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">)</span></li>
+                                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">전송 용량 <span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">1.1M (</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">헤더 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">0.1M, </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">바디 </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">1.0M)</span></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h4 style="font-size: 1.125em;margin: 60px 0 19px;font-weight: normal;"><b>😅 <span style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">Last-Modified, If-Modified-Since </span><span style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">단점</span></b></h4>
+                                <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">1초미만 단위로 캐시 조정 불가능</li>
+                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">날짜 기반 로직사용</li>
+                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">같은 데이터를 수정해서 날짜는 다른데, 데이터가 같은 경우</li>
+                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">서버에서 별도로 캐시 로직을 관리하고 싶은 경우</li>
+                                </ul>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h3 style="font-size: 1.3125em;margin: 60px 0 19px;font-weight: normal;">🛠 ETag, If-None-Match 사용</h3>
+                                <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">ETag(Entity Tag)</li>
+                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">캐시용 데이터에 임의의 고유한 버전 이름을 달아둠
+                                        <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">예). ETag: "v1.0" , ETag: "a1ch23do"</li>
+                                        </ul>
+                                    </li>
+                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">데이터가 변경되었다면 데그이름도 변경한다.
+                                        <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">예). ETag: "aaaa123" -&gt; ETag: "aaaa456"</li>
+                                        </ul>
+                                    </li>
+                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">쉽게 생각해서 ETag 하나로 데이터가 변경되었는지 아닌지 확인하는 방식</li>
+                                </ul>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h4 style="color: #000000;text-align: start;font-size: 1.125em;margin: 60px 0 19px;font-weight: normal;">🕹 ETag 요청</h4>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/cAblsx/btspdXxE4Dd/WKABbMqR3t3nDquNXegw11/img.png" width="596" height="259" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/wjmHb/btso93LXpCt/9HVTFJNyuEcB1LQRNFPcAK/img.png" width="695" height="126" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">응답과 요청에서 ETag 이름이 같다면 같은값을 반환함</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/bbW154/btso94c0SDm/7tjVwYtNXYKyN3MmtB7Cpk/img.png" width="572" height="250" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">이전의 방식과 일치하는 부분이기 때문에 ETag의 방식에만 주의하면 됨</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h4 style="font-size: 1.125em;margin: 60px 0 19px;font-weight: normal;">🛠 정리</h4>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"><b>ETag, IF-None-Match 정리&nbsp;</b></p>
+                                <div style="">
+                                    <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                        <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">진짜 단순하게 ETag만 서버에 보내서 같으면 유지, 다르면 다시 받기!</li>
+                                        <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">캐시 제어 로직을 서버에서 완전히 관리</li>
+                                        <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">클라이언트는 단순히 이 값을 서버에 제공(클라이언트는 캐시의 매커니즘을 모름</li>
+                                    </ul>
+                                    <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                </div>
+                                <h4 style="font-size: 1.125em;margin: 60px 0 19px;font-weight: normal;">🧩 캐시 제어 헤더</h4>
+                                <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;"><b>Cache-Control</b>: 캐시 제어
+                                        <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;"><b>Cache-Control: max-age</b>
+                                                <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">캐시유효시간, 초단위</li>
+                                                </ul>
+                                            </li>
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;"><b>Cache-Control: no-cache</b>
+                                                <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">데이터는 캐시해도 되지만, 항상 원서버에 검증하고 사용</li>
+                                                </ul>
+                                            </li>
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;"><b>Cache-Control: no-store</b>
+                                                <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;">데이터에 민감한 정보가 있으므로, 저장하면 안됨(메모리에서 사용하고 최대한 빨리 삭제)</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;"><b>Pragma</b>: 캐시 제어(하위 호환)</li>
+                                    <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;"><b>Expires</b>: 캐시 유효 기간(하위 호환)
+                                        <ul style="margin-bottom: 50px;list-style: disc inside;" data-ke-list-type="disc">
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;"><span style="background-color: #ffffff; color: #333333; text-align: left;">expires: Mon, 01 Jan 1990 00:00:00 GMT</span></li>
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;"><span style="background-color: #ffffff; color: #333333; text-align: left;">캐시 만료일을 정확한 날짜로 지정</span></li>
+                                            <li style="list-style: inherit;position: relative;padding-left: 22px;font-size: 0.9375em;line-height: 1.6;color: #666;text-indent: -22px;"><span style="background-color: #ffffff; color: #333333; text-align: left;">지금은 더 유연한<span>&nbsp;</span></span><span style="background-color: #ffffff; color: #333333; text-align: left;">Cache-Control: max-age<span>&nbsp;</span></span><span style="background-color: #ffffff; color: #333333; text-align: left;">권장</span><br>
+                                                <div style="">&nbsp;</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h3 style="font-size: 1.3125em;margin: 60px 0 19px;font-weight: normal;"><span style="background-color: #ffffff; color: #333333; text-align: left;">🧩 프록시 캐시</span></h3>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/q5pmY/btso8AwxXXO/AhVzdWCPLNtaa45LMupiXk/img.png" width="657" height="307" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">위의 사진으로 프록시 캐시를 사용하는 이유를 설명가능 하다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">한국에 있는 클라이언트들은 외국의 서버에 접근하기 위해서는 시간이 많이 소요된다.&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">이를 해결할 수 있는 방안이 프록시 캐시이다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/kKadW/btspcvVV1GO/fnFO8D5zFcDGQEHu2pmsZk/img.png" width="698" height="285" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">모든 클라이언트가 0.5초의 시간을 소요해가면서 외국의 서버에 접근하는 것은 비 효율적이기 때문에 최초의 접근자가 미국의 원서버에 접근할때 한국의 프록시 캐시 서버의 그 정보를 저장하게 된다. 다음 클라이언트 부터는 미국의 원 서버가 아닌 한국의 프록시 캐시 서버로 접근을 하기 때문에 훨씬 빠른 속도로 데이터를 받아올 수 있다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <h4 style="font-size: 1.125em;margin: 60px 0 19px;font-weight: normal;">🧩캐시 무효화</h4>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">캐시 무효화를 설정해도 서버가 마음대로 캐시를 하는 경우가 있다. 그런경우 특정한 설정을 통해서 캐시를 하지 못하게 막아야 한다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"><i><b><span style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">Cache-Control: no-cache, no-store, must-revalidate</span></b></i></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"><span style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: 0px;">위 설정들이 캐시에 필요한 설정들이다.</span></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/b9KsP2/btspdKeeDuW/pkqdfzalxJMvOdiNjssUYK/img.png" width="598" height="397" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">위 명령어들의 주의 사항이니 잘보아야 한다.</p>
+                                <blockquote data-ke-style="style2" style="padding: 16px 20px;margin-bottom: 60px;border-left: 4px solid #e6e6e6;">그런데 no-cache 와 must-revalidate는 유사하면서 no-cache가 상위호환의 느낌인데, 왜 둘다 사용하는 것인가?</blockquote>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">❗️이유는&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;"></p><figure style="margin: 0 auto 20px;max-width: 100%;clear: both;display: table;position: relative;text-align: center;"><span style="cursor: pointer;"><img src="https://blog.kakaocdn.net/dn/bqLhsM/btspdYpTxZk/FrKnLhUHkmU1PeIz4uDCW0/img.png" width="554" height="174" style="border: none;vertical-align: top;max-width: 100% !important;display: inline-block;height: auto;margin-top: 36px;"></span></figure>
+                                <p></p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">프록시 캐시와 원서버간의 순간적인 단절이 생겼을때이다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">no-cache인 경우는 특정서버에 설정에 따라 오류 발생시 과거의 데이터를 보여준다고 한다.</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">하지만 must-revalidate는 이 경우 무조건 504에러를 반환하기 때문에 돈과 같이 중요한 정보에 대해서는 에러를 반환하는 편이 좋기 때문에 같이 사용한다.&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">&nbsp;</p>
+                                <p style="font-size: 0.9375em;line-height: 1.6;color: #666;;;">출처: 김영한님 '모든 개발자를 위한 HTTP 강의'</p>
+
+
+
+                                <br /><br /><br />
+                                <!-- Post Blockquote Start -->
+                                <div class="post-quote margin-top-40 margin-bottom-40">
+                                    <blockquote>힘내라힘</blockquote>
+                                </div>
+                                <!-- Post Blockquote End -->
+
+                                <!-- Post Author Bio Box Start -->
+                                <div class="about-author margin-top-70 margin-bottom-50">
+                                    <div class="picture">
+                                        <img src="../images/testimonial/cute-totoro.png" class="img-responsive" alt="" />
+                                    </div>
+
+                                    <div class="c-padding">
+                                        <h3>
+                                            <a href="../contact.html" target="_blank" data-toggle="tooltip" data-placement="top" title="임직찬의 블로그 보기">임직찬</a>
+                                        </h3>
+                                        <p>
+                                            느리지만 무너지지 않게 쌓아올리는 개발자가 되겠습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Post Author Bio Box End -->
+
+                                <!-- You May Also Like Start -->
+                                <div class="you-may-also-like margin-top-50 margin-bottom-50">
+                                    <h3>나의 다른 게시물</h3>
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-6 col-xs-12">
+                                            <a href="httpMethod.html">
+                                                <p>
+                                                    Make mailchimp singup form working with ajax using
+                                                    jquery plugin
+                                                </p>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-6 col-xs-12">
+                                            <a href="httpMethod.html">
+                                                <p>
+                                                    How to design elegant e-mail newsletter in html
+                                                    for wish christmas to your subscribers?
+                                                </p>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-6 col-xs-12">
+                                            <a href="httpMethod.html">
+                                                <p>
+                                                    How to customize a wordpress theme entirely from
+                                                    scratch using a child theme?
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- You May Also Like End -->
+
+                                <!-- Post Comment (Disqus) Start -->
+                                <div id="comment" class="comment">
+                                    <h3>레퍼런스</h3>
+
+                                    <!-- Disqus Code Start  (Please Note: Disqus will not be load on local, You have to upload it on server.)-->
+                                    <div id="disqus_thread"></div>
+                                    <script>
+                                        /***  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS. LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables.
+
+                                         var disqus_config = function () {
+							this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+							this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+							};
+                                         */
+
+                                        (function() {
+                                            // DON'T EDIT BELOW THIS LINE
+                                            var d = document,
+                                                s = d.createElement("script");
+                                            s.src = "//uipasta.disqus.com/embed.js"; // Please change the url from your own disqus id
+                                            s.setAttribute("data-timestamp", +new Date());
+                                            (d.head || d.body).appendChild(s);
+                                        })();
+                                    </script>
+                                    <noscript>Please enable JavaScript to view the
+                                        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                    <!-- Disqus Code End -->
+                                </div>
+                                <!-- Post Comment (Disqus) End -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subscribe Form Start -->
+                    <div class="col-md-8 col-md-offset-2">
+                        <form id="mc-form" method="post" action="http://localhost:8080/mail/send">
+                            <div class="subscribe-form margin-top-20">
+                                <input id="mc-email" name="email" type="email" placeholder="Email Address" class="text-input">
+                                <button id="submit-btn" class="submit-btn" type="submit">전송</button>
+                            </div>
+                            <p>주간 뉴스 구독하기</p>
+                            <label for="mc-email" class="mc-label"></label>
+                        </form>
+
+                    </div>
+                    <!-- Subscribe Form End -->
+                </div>
+
+                <!-- Footer Start -->
+                <div class="col-md-12 page-body margin-top-50 footer">
+                    <footer>
+                        <ul class="menu-link">
+                            <li><a href="../index.html">홈</a></li>
+                            <li><a href="../about.html">나에 대해</a></li>
+                            <li><a href="../work.html">포트폴리오</a></li>
+                            <li><a href="../contact.html">연락하기</a></li>
+                        </ul>
+
+                        <p>© Copyright 2016 DevBlog. All rights reserved</p>
+
+                        <!-- UiPasta Credit Start -->
+                        <div class="uipasta-credit">
+                            <i class="fa fa-love"></i><a href="https://github.com/jickDo">나에 대해 궁금하다면?</a>
+                        </div>
+                        <!-- UiPasta Credit End -->
+                    </footer>
+                </div>
+                <!-- Footer End -->
+            </div>
+            <!-- Blog Post (Right Sidebar) End -->
+        </div>
+    </div>
+</div>
+
+<!-- Endpage Box (Popup When Scroll Down) Start -->
+<div id="scroll-down-popup" class="endpage-box">
+    <h4>처음부터 읽기</h4>
+    <a href="#">캐쉬</a>
+</div>
+<!-- Endpage Box (Popup When Scroll Down) End -->
+
+<!-- Back to Top Start -->
+<a href="#" class="scroll-to-top"><i class="fa fa-long-arrow-up"></i></a>
+<!-- Back to Top End -->
+
+<!-- All Javascript Plugins  -->
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/plugin.js"></script>
+
+<!-- Main Javascript File  -->
+<script type="text/javascript" src="../js/scripts.js"></script>
+
+<!-- Syntax Highlighter Javascript File  -->
+<script type="text/javascript" src="../js/syntax/shCore.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushCss.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushJScript.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushPerl.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushPhp.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushPlain.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushPython.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushRuby.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushSql.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushVb.js"></script>
+<script type="text/javascript" src="../js/syntax/shBrushXml.js"></script>
+<script type="text/javascript" src="../js/newsToUser.js"></script>
+
+<!-- Syntax Highlighter Call Function -->
+<script type="text/javascript">
+    SyntaxHighlighter.config.clipboardSwf = "js/syntax/clipboard.swf";
+    SyntaxHighlighter.all();
+</script>
+</body>
+
+</html>

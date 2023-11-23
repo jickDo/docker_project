@@ -1,20 +1,45 @@
+# DB설정
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306
+    url: jdbc:mysql://localhost:3306/cloud_native
     username: root
     password: rootroot
 
+#jpa 설정
   jpa:
     database: mysql
     open-in-view: false
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     properties:
       hibernate:
         format-sql: true
 
+# 메일 설정 ${}으로 민감정보 환경변수 화
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    default-encoding: utf-8
+    username: jickchan0117@gmail.com
+    password: ymdglmhnrgvvdqxm
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+# Swagger springdoc-ui Configuration
+springdoc:
+  swagger-ui:
+    path: api
+    tags-sorter: alpha
+    operations-sorter: alpha
+  paths-to-match:
+    - /**
 
 server:
   port: 8080

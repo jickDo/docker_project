@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+
+<head>
+    <style>
+        body {
+            margin: 100px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        div.box {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        h3 {
+            color: #007bff;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        div.code {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            background-color: #f7f7f7;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>[[${name}]] 님이 직찬님에게 메일을 보냈어요</h1>
+    <h1>개발자 체용과 관련해서 문의할것이 있나봐요.</h1>
+    <br>
+    <p>아래정보를 보시고, 회신 하여주세요~.</p>
+    <br>
+
+    <div class="box">
+        <h3>회원 정보</h3>
+        <p><strong>이름:</strong> [[${name}]]</p>
+        <p><strong>이메일:</strong> [[${emailAddress}]]</p>
+        <p><strong>회사 URL:</strong> [[${companyUrl}]]</p>
+        <p><strong>주소:</strong> [[${address}]]</p>
+        <p><strong>직무:</strong> [[${Job}]]</p>
+        <p><strong>코멘트:</strong> [[${comment}]]</p>
+    </div>
+    <br/>
+</div>
+</body>
+
+</html>
+
+<!--나에게 보내는 이메일 타임리프 템플릿이다.-->

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>뉴스 기사</title>
+    <style>
+        /* 이메일에 사용되는 기본 스타일 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            margin: 0 auto;
+            width: 600px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 상자에 그림자 추가 */
+        }
+        .header {
+            background: #0056b3;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .content {
+            padding: 20px;
+            text-align: center; /* 내용 중앙 정렬 */
+        }
+        .footer {
+            background: #eaeaea;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 0 0 5px 5px;
+        }
+        .title {
+            color: #0056b3;
+            margin: 20px;
+            word-wrap: break-word; /* 긴 단어가 있을 경우 줄바꿈 */
+            max-width: 100%; /* 제목 너비 최대화 */
+        }
+        a.button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px 5px; /* 좌우 마진 조정하여 버튼을 중앙으로 배치 */
+            background: #0056b3;
+            color: #fff;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 16px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        /* 버튼을 동일한 높이로 유지하기 위해 flexbox 사용 */
+        .button-container {
+            display: inline-block;
+            justify-content: center; /* 수평 정렬 */
+            align-items: center; /* 수직 정렬 */
+            margin-top: 20px; /* 버튼과 제목 사이의 간격 조정 */
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px 5px;
+            background: #0056b3;
+            color: #fff;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 16px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            color: #0056b3;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1 style="word-break: break-word;">임직찬의 주간 가천소식</h1> <!-- 제목 줄바꿈 허용 -->
+    </div>
+    <div class="content">
+        <h2 class="title" th:text="${title}">뉴스 제목</h2>
+        <br>
+        <!-- 버튼 컨테이너로 감싸서 flexbox를 이용해 중앙 정렬 -->
+        <div class="button-container">
+            <a class="button" th:href="${originallink}" th:text="'원문 링크'">원문 링크</a>
+            <a class="button" th:href="${link}" th:text="'네이버 링크'">네이버 링크</a>
+        </div>
+        <br>
+        <p th:text="${description}">뉴스 설명</p>
+    </div>
+    <div class="footer">
+        <p th:text="${pubDate}">게시일</p>
+    </div>
+</div>
+</body>
+</html>
+
+<!--뉴스를 보내는 타임리프 템플릿이다..-->
